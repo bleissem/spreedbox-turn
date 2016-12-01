@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+
+include /usr/share/dpkg/default.mk
+
+DEB_DIVERT_EXTENSION=.spreedbox
+DEB_DIVERT_FILES_spreedbox-turn += \
+    /etc/turnserver.conf.spreedbox
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/rules/config-package.mk

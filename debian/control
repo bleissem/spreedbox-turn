@@ -1,0 +1,25 @@
+Source: spreedbox-turn
+Section: utils
+Priority: standard
+Maintainer: struktur AG <opensource@struktur.de>
+Uploaders:
+ Joachim Bauch <bauch@struktur.de>
+Build-Depends:
+ dpkg-dev (>= 1.16.1~),
+ cdbs,
+ debhelper,
+ dh-buildinfo,
+ config-package-dev (>= 5.0~)
+Standards-Version: 3.9.3
+
+Package: spreedbox-turn
+Architecture: all
+Depends:
+ coturn,
+ logrotate,
+ spreedbox-servicecontrold (>= 0.2.5),
+ ${misc:Depends}
+Provides: ${diverted-files}
+Conflicts: ${diverted-files}
+Description: Package to install TURN functionality on the Spreedbox
+ This package installs TURN functionality on the Spreedbox.

@@ -1,0 +1,9 @@
+/var/log/coturn/*.log {
+       daily
+       rotate 14
+       copytruncate
+       delaycompress
+       compress
+       notifempty
+       missingok
+}

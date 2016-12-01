@@ -1,0 +1,5 @@
+spreedbox-turn (0.0.1) trusty; urgency=low
+
+  * Added package to install TURN functionality on the Spreedbox.
+
+ -- Joachim Bauch <bauch@struktur.de>  Thu, 01 Dec 2016 10:53:06 +0100

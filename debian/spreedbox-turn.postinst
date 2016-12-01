@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+
+case "$1" in
+    configure)
+        cp --no-clobber /usr/share/doc/spreedbox-turn/turnserver.conf.in /etc/turnserver.conf.spreedbox
+        ;;
+esac
+
+#DEBHELPER#
+
+exit 0

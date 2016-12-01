@@ -1,0 +1,29 @@
+#! /bin/sh
+# Reload the coturn server when an interface comes up, to allow it to start
+# listening on new addresses.
+
+set -e
+
+# Don't bother to restart when lo is configured.
+if [ "$IFACE" = lo ]; then
+	exit 0
+fi
+
+# Only run from ifup.
+if [ "$MODE" != start ]; then
+	exit 0
+fi
+
+# Coturn only cares about inet and inet6.
+if [ "$ADDRFAM" != inet ] && [ "$ADDRFAM" != inet6 ]; then
+	exit 0
+fi
+
+# Is /usr mounted?
+if [ ! -x /usr/bin/turnserver ]; then
+	exit 0
+fi
+
+invoke-rc.d coturn restart >/dev/null 2>&1 || true
+
+exit 0
