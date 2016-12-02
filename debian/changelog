@@ -1,3 +1,9 @@
+spreedbox-turn (0.0.2) trusty; urgency=low
+
+  * Update location of initial configuration.
+
+ -- Joachim Bauch <bauch@struktur.de>  Fri, 02 Dec 2016 12:40:13 +0100
+
 spreedbox-turn (0.0.1) trusty; urgency=low
 
   * Added package to install TURN functionality on the Spreedbox.
