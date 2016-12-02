@@ -3,7 +3,7 @@ set -e
 
 case "$1" in
     configure)
-        cp --no-clobber /usr/share/doc/spreedbox-turn/turnserver.conf.in /etc/turnserver.conf.spreedbox
+        cp --no-clobber /usr/share/spreedbox-turn/turnserver.conf.in /etc/turnserver.conf.spreedbox
         ;;
 esac
 

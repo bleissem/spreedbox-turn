@@ -1,2 +1,2 @@
 coturn	etc/network/if-up.d/
-turnserver.conf.in	usr/share/doc/spreedbox-turn/
+turnserver.conf.in	usr/share/spreedbox-turn/
