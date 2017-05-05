@@ -1,3 +1,9 @@
+spreedbox-turn (0.0.3) trusty; urgency=medium
+
+  * Only restart coturn on ifup when enabled.
+
+ -- Joachim Bauch <bauch@struktur.de>  Fri, 05 May 2017 11:54:16 +0200
+
 spreedbox-turn (0.0.2) trusty; urgency=low
 
   * Update location of initial configuration.
