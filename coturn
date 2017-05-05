@@ -24,6 +24,13 @@ if [ ! -x /usr/bin/turnserver ]; then
 	exit 0
 fi
 
-invoke-rc.d coturn restart >/dev/null 2>&1 || true
+# Read configuration variable file if it is present
+[ -r /etc/default/coturn ] && . /etc/default/coturn
+
+if test "$TURNSERVER_ENABLED" = 1; then
+	invoke-rc.d coturn restart >/dev/null 2>&1 || true
+else
+	invoke-rc.d coturn stop >/dev/null 2>&1 || true
+fi
 
 exit 0
